@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOUDWISE | Rightsizing & Cost Optimization</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1384 20.1834 10.2017 17.8687 10.0211C17.3824 6.61902 14.4449 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2319 4.01132 11.4611 4.03333 11.6874C2.29051 12.3514 1 14.0253 1 16C1 18.2091 2.79086 20 5 20H17.5V19Z" fill="currentColor"/>
+                    </svg>
+                    <span>CLOUDWISE</span>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="dashboard">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item" data-target="simulator">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    Rightsizing Simulator
+                </a>
+                <a href="#" class="nav-item" data-target="resources">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    Resources
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view active">
+                <div class="view-header">
+                    <h1 class="view-title">Cloud Overview</h1>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">Total Cloud Cost</div>
+                        <div class="metric-value">$42,500<span class="metric-unit">/mo</span></div>
+                    </div>
+                    <div class="metric-card highlight">
+                        <div class="metric-title">Potential Savings</div>
+                        <div class="metric-value">$8,240<span class="metric-unit">/mo</span></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Active Resources</div>
+                        <div class="metric-value">124</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Performance Score</div>
+                        <div class="metric-value">98<span class="metric-unit">%</span></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="card cost-chart-card">
+                        <h2 class="card-title">Cost Overview</h2>
+                        <div class="mock-chart">
+                            <div class="bar" style="height: 60%;"></div>
+                            <div class="bar" style="height: 70%;"></div>
+                            <div class="bar" style="height: 65%;"></div>
+                            <div class="bar" style="height: 80%;"></div>
+                            <div class="bar" style="height: 90%;"></div>
+                            <div class="bar" style="height: 75%;"></div>
+                            <div class="bar current" style="height: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card top-resources-card">
+                        <h2 class="card-title">Top Resources by Cost</h2>
+                        <div class="table-container">
+                            <table class="simple-table">
+                                <thead>
+                                    <tr>
+                                        <th>Resource</th>
+                                        <th>CPU</th>
+                                        <th>Memory</th>
+                                        <th>Cost</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>prod-db-main</td>
+                                        <td>8 vCPU</td>
+                                        <td>32 GB</td>
+                                        <td>$850</td>
+                                        <td><span class="badge warning">Over-provisioned</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>api-gateway</td>
+                                        <td>4 vCPU</td>
+                                        <td>8 GB</td>
+                                        <td>$240</td>
+                                        <td><span class="badge success">Optimized</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>worker-node-1</td>
+                                        <td>16 vCPU</td>
+                                        <td>64 GB</td>
+                                        <td>$1,200</td>
+                                        <td><span class="badge warning">Over-provisioned</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simulator View -->
+            <section id="simulator" class="view">
+                <div class="view-header">
+                    <h1 class="view-title">Rightsizing Simulator</h1>
+                    <p class="view-subtitle">Optimize cloud cost without compromising performance.</p>
+                </div>
+
+                <div class="simulator-container">
+                    <div class="simulator-panel baseline-panel">
+                        <h2 class="panel-title">Baseline Configuration</h2>
+                        <div class="form-group">
+                            <label>Resource Name</label>
+                            <input type="text" id="sim-name" value="web-server-prod" readonly class="input-readonly">
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="sim-cpu-util">CPU Utilization (%)</label>
+                                <input type="number" id="sim-cpu-util" min="0" max="100" value="25">
+                            </div>
+                            <div class="form-group">
+                                <label for="sim-mem-util">Memory Utilization (%)</label>
+                                <input type="number" id="sim-mem-util" min="0" max="100" value="40">
+                            </div>
+                            <div class="form-group">
+                                <label for="sim-req-vol">Request Volume (req/sec)</label>
+                                <input type="number" id="sim-req-vol" value="150">
+                            </div>
+                            <div class="form-group">
+                                <label for="sim-latency">Latency (ms)</label>
+                                <input type="number" id="sim-latency" value="45">
+                            </div>
+                            <div class="form-group">
+                                <label for="sim-avail">Availability (%)</label>
+                                <input type="number" id="sim-avail" step="0.01" value="99.99">
+                            </div>
+                            <div class="form-group">
+                                <label for="sim-cost">Current Monthly Cost ($)</label>
+                                <input type="number" id="sim-cost" value="450">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="simulator-panel proposed-panel">
+                        <h2 class="panel-title">Proposed Configuration</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="sim-prop-cpu">Proposed CPU</label>
+                                <select id="sim-prop-cpu">
+                                    <option value="2">2 vCPU</option>
+                                    <option value="4" selected>4 vCPU</option>
+                                    <option value="8">8 vCPU</option>
+                                    <option value="16">16 vCPU</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="sim-prop-mem">Proposed Memory</label>
+                                <select id="sim-prop-mem">
+                                    <option value="4">4 GB</option>
+                                    <option value="8" selected>8 GB</option>
+                                    <option value="16">16 GB</option>
+                                    <option value="32">32 GB</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="sim-prop-cost">Estimated Monthly Cost ($)</label>
+                                <input type="number" id="sim-prop-cost" value="225">
+                            </div>
+                        </div>
+                        
+                        <div class="action-container">
+                            <button class="btn btn-primary btn-large" id="btn-analyze">Analyze Rightsizing</button>
+                        </div>
+
+                        <!-- Result Card -->
+                        <div id="sim-result" class="result-card hidden">
+                            <div class="result-header">
+                                <div class="result-icon" id="res-icon"></div>
+                                <h3 class="result-title" id="res-title">Result</h3>
+                            </div>
+                            <div class="result-body">
+                                <div class="res-metric hidden" id="res-savings-box">
+                                    <span class="res-label">Estimated Monthly Savings:</span>
+                                    <span class="res-value success-text" id="res-savings"></span>
+                                </div>
+                                <div class="res-metric">
+                                    <span class="res-label">Performance Risk:</span>
+                                    <span class="res-value" id="res-risk"></span>
+                                </div>
+                                <p class="res-reason" id="res-reason"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources View -->
+            <section id="resources" class="view">
+                <div class="view-header">
+                    <h1 class="view-title">Resources</h1>
+                </div>
+
+                <div class="card">
+                    <div class="table-toolbar">
+                        <div class="search-box">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <input type="text" id="resource-search" placeholder="Search resources...">
+                        </div>
+                        <div class="filter-box">
+                            <select id="resource-filter">
+                                <option value="all">All Statuses</option>
+                                <option value="optimized">Optimized</option>
+                                <option value="over-provisioned">Over-provisioned</option>
+                                <option value="under-provisioned">Under-provisioned</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table" id="resources-table">
+                            <thead>
+                                <tr>
+                                    <th>Resource Name</th>
+                                    <th>Type</th>
+                                    <th>CPU</th>
+                                    <th>Memory</th>
+                                    <th>Monthly Cost</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resources-tbody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
