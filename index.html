@@ -132,35 +132,50 @@
 
                 <div class="simulator-container">
                     <div class="simulator-panel baseline-panel">
-                        <h2 class="panel-title">Baseline Configuration</h2>
+                        <h2 class="panel-title">Baseline Configuration & Policy</h2>
                         <div class="form-group">
                             <label>Resource Name</label>
                             <input type="text" id="sim-name" value="web-server-prod" readonly class="input-readonly">
                         </div>
                         <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="sim-role">Perspective (Policy Role)</label>
+                                <select id="sim-role">
+                                    <option value="admin">Lab Administrator</option>
+                                    <option value="finance">University Finance Manager</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="sim-pattern">Usage Pattern (Telemetry)</label>
+                                <select id="sim-pattern">
+                                    <option value="normal">Normal Usage</option>
+                                    <option value="burst">Lab Burst / Peak Traffic</option>
+                                    <option value="idle">Idle / Off-Semester</option>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="sim-cpu-util">CPU Utilization (%)</label>
-                                <input type="number" id="sim-cpu-util" min="0" max="100" value="25">
+                                <input type="number" id="sim-cpu-util" min="0" max="100" value="25" readonly class="input-readonly">
                             </div>
                             <div class="form-group">
                                 <label for="sim-mem-util">Memory Utilization (%)</label>
-                                <input type="number" id="sim-mem-util" min="0" max="100" value="40">
+                                <input type="number" id="sim-mem-util" min="0" max="100" value="40" readonly class="input-readonly">
                             </div>
                             <div class="form-group">
                                 <label for="sim-req-vol">Request Volume (req/sec)</label>
-                                <input type="number" id="sim-req-vol" value="150">
+                                <input type="number" id="sim-req-vol" value="150" readonly class="input-readonly">
                             </div>
                             <div class="form-group">
                                 <label for="sim-latency">Latency (ms)</label>
-                                <input type="number" id="sim-latency" value="45">
+                                <input type="number" id="sim-latency" value="45" readonly class="input-readonly">
                             </div>
                             <div class="form-group">
                                 <label for="sim-avail">Availability (%)</label>
-                                <input type="number" id="sim-avail" step="0.01" value="99.99">
+                                <input type="number" id="sim-avail" step="0.01" value="99.99" readonly class="input-readonly">
                             </div>
                             <div class="form-group">
                                 <label for="sim-cost">Current Monthly Cost ($)</label>
-                                <input type="number" id="sim-cost" value="450">
+                                <input type="number" id="sim-cost" value="450" readonly class="input-readonly">
                             </div>
                         </div>
                     </div>
